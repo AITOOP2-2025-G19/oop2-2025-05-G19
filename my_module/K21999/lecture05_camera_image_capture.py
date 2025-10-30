@@ -49,13 +49,13 @@ class MyVideoCapture:
             # 加工するともとの画像が保存できないのでコピーを生成
             img: np.ndarray = np.copy(frame)
 
-            # 画像の中心を示すターゲットマークを描画
-            rows, cols, _ = img.shape
-            center = (int(cols / 2), int(rows / 2))
-            img = cv2.circle(img, center, 30, (0, 0, 255), 3)
-            img = cv2.circle(img, center, 60, (0, 0, 255), 3)
-            img = cv2.line(img, (center[0], center[1] - 80), (center[0], center[1] + 80), (0, 0, 255), 3)
-            img = cv2.line(img, (center[0] - 80, center[1]), (center[0] + 80, center[1]), (0, 0, 255), 3)
+            # # 画像の中心を示すターゲットマークを描画
+            # rows, cols, _ = img.shape
+            # center = (int(cols / 2), int(rows / 2))
+            # img = cv2.circle(img, center, 30, (0, 0, 255), 3)
+            # img = cv2.circle(img, center, 60, (0, 0, 255), 3)
+            # img = cv2.line(img, (center[0], center[1] - 80), (center[0], center[1] + 80), (0, 0, 255), 3)
+            # img = cv2.line(img, (center[0] - 80, center[1]), (center[0] + 80, center[1]), (0, 0, 255), 3)
 
             # 左右反転（顔を撮るときは左右反転しておくとよい）
             img = cv2.flip(img, flipCode=1)
