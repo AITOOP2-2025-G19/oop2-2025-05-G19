@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-from my_module.X24006.lecture05_camera_image_capture import MyVideoCapture
+from my_module.K21999.lecture05_camera_image_capture import MyVideoCapture
 
 def lecture05_01():
 
@@ -47,4 +47,4 @@ def lecture05_01():
     if new_img is None:
         raise ValueError("キャプチャ画像が存在しません。run()を実行してから保存してください。")
 
-    cv2.imwrite('output.png', new_img)
+    cv2.imwrite('output_images/lecture05_01_X24006.png', new_img)
